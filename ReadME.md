@@ -228,7 +228,7 @@ cd WebApp
 Make sure you have [Node.js](https://nodejs.org/) installed.
 
 ```bash
-npm install express mongodb pdfkit exceljs
+npm install express mongodb pdfkit exceljs chart.js
 ```
 
 > ✅ This installs:
@@ -236,7 +236,7 @@ npm install express mongodb pdfkit exceljs
 > - `mongodb` – MongoDB driver
 > - `pdfkit` – PDF generation library
 > - `exceljs` – Excel file generation library
-
+> - `chart.js` - Chart building library
 ### 3. Set Up Environment
 
 Ensure your MongoDB database is running and accessible. Update your MongoDB connection URI inside `db.js`.
