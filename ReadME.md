@@ -219,8 +219,8 @@ project/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/AdolfArchibald/Final-Year-Project.git
+cd WebApp
 ```
 
 ### 2. Install Dependencies
