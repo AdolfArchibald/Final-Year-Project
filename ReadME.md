@@ -178,39 +178,7 @@ Growth Percentage = ((Predicted Price - Current Price) / Current Price) × 100
 - **Alpha Vantage**: For stock data API
 - **TensorFlow**: For the ML model framework
 
-# 📈 Stock Prediction and Market Data API
 
-This Node.js/Express server provides endpoints to fetch stock predictions, historical data, and S&P 500 performance, along with features to export data as PDF or Excel. It also serves static frontend pages.
-
----
-
-## 📁 Project Structure
-
-```
-project/
-├── server.js
-├── db.js
-├── exportUtils.js
-├── index.html
-├── about.html
-├── history.html
-├── performance.html
-└── package.json
-```
-
----
-
-## 🚀 Features
-
-- Serves static HTML pages
-- RESTful API for:
-  - Stock predictions
-  - Historical stock data
-  - S&P 500 market performance
-- PDF and Excel export capabilities
-- MongoDB database integration
-
----
 
 # 📈 Stock Prediction and Market Data API
 
