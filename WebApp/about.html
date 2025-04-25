@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - My Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/styles.css">
+
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Background Bubbles -->
+    <div class="bubbles">
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Stock Source</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="performance.html">Performance</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content: Text Boxes -->
+    <div class="container content">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <!-- Summary Box -->
+                <div class="text-box">
+                    <h2>Summary</h2>
+                    <p>
+                        Welcome to our little corner of the internet.
+                        <br>
+                        This site's all about giving you a heads-up on 20 stocks we think are going to shine each month.
+                        <br>
+                        We've built this platform to be totally free - no catch, no hidden fees - just a straightforward list of predictions to help you get ahead.
+                        <br>
+                        It's like a friend tipping you off about something good, only with stocks instead of coffee shops.
+                        <br>
+                        <br>
+                        You can take these at face value or use them as additional reference when making your own stock choices.
+                        <br>
+                        You can export this to a PDF or Excel sheet for offline reference, or share the link with your friends.
+                        <br>
+                        <br>
+                        View the History or Performance pages to see what this model can potentially do for you!
+                        <br>
+                        PS - We all know this is still a risky game, we are not responsible for any losses.
+                    </p>
+                </div>
+
+                <!-- Financial Literacy Box -->
+                <div class="text-box">
+                    <h2>Vision</h2>
+                    <p>
+                        Here's the heart of it: we're not just throwing stock tips at you and calling it a day.
+                        <br>
+                        We want to lift up your money game—help you understand what's going on with your cash and how to make it work harder for you.
+                        <br>
+                        Think of this as a stepping stone to feeling more confident about finances.
+                        <br>
+                        We're here to break it down, keep it real, and help you manage your money like a pro.
+                        <br>
+                        <br>
+                        Using the Performance Graph, you can track exactly how your investment would have grown over the course of the last 15 months.
+                        <br>
+                        We also included a plotted line that tracks the S&P 500 index fund for comparison, just so you know how we are doing in context.
+                    </p>
+                </div>
+
+                <!-- Predictions Box -->
+                <div class="text-box">
+                    <h2>How</h2>
+                    <p>
+                        Picture this: we've got a machine learning setup that's like a super-smart buddy who's obsessed with numbers.
+                        <br>
+                        It digs into current stock prices, crunches a ton of data — like trends, volumes, and whatever else the market's whispering about
+                        and spits out predictions for what's likely to pop off each month.
+                        <br>
+                        <br>
+                        We've spent ages tweaking it, optimizing the heck out of it so it's not just guessing but actually learning from what's worked before.
+                        <br>
+                        <br>
+                        It's not perfect (nothing is!), but it's pretty darn good at spotting the winners.
+                    </p>
+                </div>
+
+                <!-- Exports Box -->
+                <div class="text-box">
+                    <h2>Graphs</h2>
+                    <p>
+                        The History Graph is view only - it's there to show you how this model performed historically.
+                        <br>
+                        <br>
+                        The Performance graph is more interactive - enter your amounts that you want to work with.
+                        <br>
+                        You can even use negative values for the monthly contributions, in the event you want to use some of your investment.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Social Icons -->
+            <div class="social-icons mb-2">
+                <a href="https://twitter.com" target="_blank" class="text-white me-3">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="text-white me-3">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com" target="_blank" class="text-white">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+            <p>© <span id="year"></span> Stock Source. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+/* INDEX PAGE STYLING */
+body {
+    background: #1a1a2e;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    animation: pulseBackground 10s infinite ease-in-out;
+}
+
+/* Pulsing Background Animation */
+@keyframes pulseBackground {
+    0%, 100% { background-color: #1a1a2e; }
+    50% { background-color: #16213e; }
+}
+
+/* Bubbles Container */
+.bubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* Base Bubble Styles */
+.bubbles span {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, rgba(120, 180, 255, 0.5), transparent); /* Brighter blue */
+    border-radius: 50%;
+    animation: float 15s infinite;
+    filter: blur(4px); /* Slightly reduced blur for sharper edges */
+    opacity: 0.8; /* Increased opacity for more presence */
+    bottom: -30px;
+    box-shadow: 0 0 10px rgba(120, 180, 255, 0.6); /* Subtle glow */
+}
+
+/* Alternating Colors */
+.bubbles span:nth-child(even) {
+    background: radial-gradient(circle, rgba(255, 120, 160, 0.5), transparent); /* Brighter pink */
+    box-shadow: 0 0 10px rgba(255, 120, 160, 0.6);
+}
+
+.bubbles span:nth-child(3n) {
+    background: radial-gradient(circle, rgba(180, 255, 120, 0.5), transparent); /* Brighter green */
+    box-shadow: 0 0 10px rgba(180, 255, 120, 0.6);
+}
+
+/* Float Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0.3; /* Slightly higher starting opacity */
+    }
+    50% {
+        opacity: 1; /* Peak brightness mid-animation */
+    }
+    100% {
+        transform: translateY(calc(-100vh - 30px)) scale(1.2);
+        opacity: 0.5; /* Fade out with a bit more visibility */
+    }
+}
+
+/* Positioning and Delays */
+.bubbles span { --i: 10; }
+.bubbles span:nth-child(1) { left: 10%; animation-delay: 0s; --i: 11; }
+.bubbles span:nth-child(2) { left: 20%; animation-delay: 2s; --i: 12; }
+.bubbles span:nth-child(3) { left: 30%; animation-delay: 4s; --i: 24; }
+.bubbles span:nth-child(4) { left: 40%; animation-delay: 6s; --i: 10; }
+.bubbles span:nth-child(5) { left: 50%; animation-delay: 8s; --i: 14; }
+.bubbles span:nth-child(6) { left: 60%; animation-delay: 10s; --i: 23; }
+.bubbles span:nth-child(7) { left: 70%; animation-delay: 12s; --i: 18; }
+.bubbles span:nth-child(8) { left: 80%; animation-delay: 14s; --i: 16; }
+.bubbles span:nth-child(9) { left: 90%; animation-delay: 16s; --i: 19; }
+.bubbles span:nth-child(10) { left: 15%; animation-delay: 18s; --i: 20; }
+
+/* Navigation Bar */
+.navbar {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand, .nav-link {
+    color: #e0e0e0;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #a3bffa;
+}
+
+/* Content */
+.content {
+    padding: 50px 0;
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Custom Data Table */
+.data_table {
+    width: 100%;
+    min-width: 100%;
+    background: rgba(40, 50, 80, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    border-collapse: collapse;
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+.data_table thead {
+    background: rgba(22, 33, 62, 0.6);
+    color: #e0e0e0;
+}
+
+.data_table th,
+.data_table td {
+    padding: 15px 25px;
+    text-align: left;
+    width: 33.33%;
+}
+
+.data_table tbody tr:nth-child(odd) {
+    background: rgba(40, 50, 80, 0.35);
+}
+
+.data_table tbody tr:nth-child(even) {
+    background: rgba(40, 50, 80, 0.2);
+}
+
+.data_table tbody tr:hover {
+    background: rgba(100, 150, 255, 0.35);
+    transition: background 0.3s;
+}
+
+/* Footer */
+.footer {
+    background: rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Download Buttons */
+.download-buttons {
+    margin-top: 20px; /* Matches table’s margin-top for consistency */
+}
+
+.btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+/* ABOUT PAGE SPECIFIC STYLING */
+/* Text Box Styling */
+.text-box {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff; /* White text for readability on dark background */
+    backdrop-filter: blur(5px); /* Optional: Adds a frosted glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px;
+}
+
+.text-box h2 {
+    color: #ffffff; /* White header */
+    margin-bottom: 15px;
+}
+
+.text-box p {
+    line-height: 1.6; /* Better readability */
+}
+
+/* History Chart Styling */
+/* Main content area */
+.content {
+    padding: 20px;
+    min-height: calc(100vh - 200px);
+}
+
+/* Custom chart container */
+.chart-container {
+    width: 95%; /* Up from 90% for more horizontal space */
+    max-width: 1400px; /* Raised cap from 1200px for larger screens */
+    margin: 0 auto;
+}
+
+/* History Chart Styling */
+#historyChart {
+    background-color: rgba(30, 30, 46, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100% !important;
+    height: 800px !important; /* Up from 400px for more vertical room */
+    margin: 0 auto;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* PERFORMANCE PAGE STYLING */
+canvas#performanceChart { /* Higher specificity */
+    background-color: rgba(30, 30, 46, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100% !important;
+    height: 800px !important;
+    max-height: 800px !important; /* Double down on max */
+    margin: 0 auto;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* Input Form Styling */
+.input-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.input-form label {
+    font-size: 1rem;
+}
+
+.input-form input {
+    background-color: transparent;
+    color: #ffffff !important; /* Force text to white - if not forced there are inconsistencies */
+    border: 1px solid #ffffff;
+    transition: box-shadow 0.2s ease;
+}
+
+.input-form input::placeholder {
+    color: #cccccc;
+}
+
+.input-form input:hover {
+    background-color: transparent;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.input-form input:focus {
+    background-color: transparent;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+.input-form input:active {
+    background-color: transparent;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+}
+
+.input-form .btn-custom {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.input-form .btn-custom:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+/* Social Icons ALL PAGES */
+.social-icons {
+    text-align: center;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+    text-decoration: none; /* Removes the underline that appears by the X and Instagram Icons */
+}
+
+.social-icons a:hover {
+    color: rgba(255, 255, 255, 0.7); /* Subtle hover effect */
+}
+
+.footer {
+    padding: 20px 0; /* Add some padding for breathing room */
+}
